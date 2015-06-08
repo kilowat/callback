@@ -1,0 +1,1 @@
+<?echo CAdminMessage::ShowNote(GetMessage("CALLBACK_INSTALL_OK"));?>

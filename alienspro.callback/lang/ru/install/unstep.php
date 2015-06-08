@@ -1,0 +1,1 @@
+<?$MESS ['CALLBACK_UNINSTALL_OK'] = "Удаления модуля";?>

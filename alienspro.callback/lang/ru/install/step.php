@@ -1,0 +1,1 @@
+<?$MESS ['CALLBACK_INSTALL_OK'] = "Установка модуля";?> 

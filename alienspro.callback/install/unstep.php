@@ -1,0 +1,1 @@
+<?echo CAdminMessage::ShowNote(GetMessage("CALLBACK_UNINSTALL_OK"));?>
