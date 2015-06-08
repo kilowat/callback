@@ -3,6 +3,7 @@ if (! defined ( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true)
 	die ();
 
 $APPLICATION->AddHeadScript ( 'http://code.jquery.com/jquery-1.11.0.min.js' );
+$APPLICATION->AddHeadScript ( '/fancybox/source/jquery.fancybox.pack.js');
 
 /*
  * Bitrix vars
