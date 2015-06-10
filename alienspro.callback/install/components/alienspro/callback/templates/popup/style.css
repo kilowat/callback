@@ -291,3 +291,7 @@ table.trackbar .c {
 .send-button:active {
 	top: 1px;
 }
+.req {
+    border: 1px solid red !important;
+    box-shadow: 0 0 2px 0 red;
+}

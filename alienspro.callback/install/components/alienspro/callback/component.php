@@ -18,12 +18,7 @@ if(!CModule::IncludeModule("alienspro.callback")){
  * @global CUser $USER
  */
 
-if($arParams["USE_THEME"]=="Y"){
-	$dbrs = callback::getListTheme();
-	while ($result = $dbrs->getNext()){
-		$arResult["THEME_LIST"][]=array("id"=>$result["id"],"name"=>$result["name"]);
-	}
-}
+
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());
 $arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" && !$USER->IsAuthorized()) ? "Y" : "N");
 $arParams["EVENT_NAME"] = trim($arParams["EVENT_NAME"]);
@@ -36,21 +31,30 @@ $arParams["OK_TEXT"] = trim($arParams["OK_TEXT"]);
 if($arParams["OK_TEXT"] == '')
 	$arParams["OK_TEXT"] = GetMessage("MF_OK_MESSAGE");
 
-if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_POST["PARAMS_HASH"]) || $arResult["PARAMS_HASH"] === $_POST["PARAMS_HASH"])){
+if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $arResult["PARAMS_HASH"] === $_POST["PARAMS_HASH"])){
 	$arResult["ERROR_MESSAGE"] = array();
 	if(check_bitrix_sessid()){
 		if(empty($arParams["REQUIRED_FIELDS"]) || !in_array("NONE", $arParams["REQUIRED_FIELDS"]))
 		{
-			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("NAME", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_name"]) <= 1)
-				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_NAME");		
-			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_email"]) <= 1)
-				if($arParams["USE_EMAIL"]=="Y")
-					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_EMAIL");   
-				if((empty($arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_phone"]) <= 1)
-					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_REQ_PHONE");
+			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("NAME", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_name"]) <= 1){
+				$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["user_name"] = true;
+				$arResult["ERROR_MESSAGE"]["NAME"] =  GetMessage("MF_REQ_NAME");		
+			}
+			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_email"]) <= 1){
+				$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["user_email"] = true;
+				$arResult["ERROR_MESSAGE"]["NAME"] =  GetMessage("MF_REQ_EMAIL");	
+				
+			}   
+			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_phone"]) <= 1){
+				$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["user_phone"] = true;
+				$arResult["ERROR_MESSAGE"]["PHONE"] =  GetMessage("MF_REQ_PHONE");	
+			}
+
 		}
-		if(strlen($_POST["user_email"]) > 1 && !check_email($_POST["user_email"]))
+		if(strlen($_POST["user_email"]) > 1 && !check_email($_POST["user_email"])){
+			$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["EMAIL_VALID"] = true;
 			$arResult["ERROR_MESSAGE"][] = GetMessage("MF_EMAIL_NOT_VALID");
+		}
 		if($arParams["USE_CAPTCHA"] == "Y")
 		{
 			include_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/classes/general/captcha.php");
@@ -97,6 +101,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST["submit"] <> '' && (!isset($_P
 		
 		$arResult["AUTHOR_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
 		$arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_POST["user_email"]);
+		if($arParams["USE_THEME"]=="Y"){
+			$dbrs = callback::getListTheme();
+			while ($result = $dbrs->getNext()){
+				$arResult["THEME_LIST"][]=array("id"=>$result["id"],"name"=>$result["name"]);
+			}
+		}
 	}
 	else
 		$arResult["ERROR_MESSAGE"][] = GetMessage("MF_SESS_EXP");
@@ -125,5 +135,13 @@ if(empty($arResult["ERROR_MESSAGE"]))
 
 if($arParams["USE_CAPTCHA"] == "Y")
 	$arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
-	$this->IncludeComponentTemplate();
+
+	if($_POST['ajax']=='y'){
+		$GLOBALS['APPLICATION']->RestartBuffer(); 
+		echo json_encode($arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]);
+		die();
+	}
+	else{
+		$this->IncludeComponentTemplate();
+	}
 ?>
