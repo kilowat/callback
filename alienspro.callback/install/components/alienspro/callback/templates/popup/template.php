@@ -89,7 +89,7 @@ $APPLICATION->AddHeadString('<link rel="stylesheet" href="//code.jquery.com/ui/1
 					width="150" height="40" alt="CAPTCHA">
 			</div>
 			<div class="captcha-form">
-				<input type="text" name="captcha_word" size="30" maxlength="50"
+				<input id="captcha_word" type="text" name="captcha_word" size="30" maxlength="50"
 					value="">
 			</div>
 			<div class="captcha-clear"></div>

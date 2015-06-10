@@ -11,7 +11,7 @@ $(document).ready(function(){
 	//$('#callback-block')alignCenterScreen();
 	var dialog = $('#callback-block').dialog({
 		 autoOpen: false,
-	      height: 300,
+	      height: 'auto',
 	      width: 350,
 	      modal: true,
 	      close: function() {
@@ -29,13 +29,12 @@ $(document).ready(function(){
 	    		user_email:$('#user_email').val(),
 	    		user_theme:$('#user_theme').val(),
 	    		PARAMS_HASH:$('#PARAMS_HASH').val(),
+	    		captcha_sid:$('#captcha_sid').val(),
 	    		sessid:$('#sessid').val(),
 	    		ajax:'y',
 	    	},
 	    	success:function(msg){
 	    		var err = (JSON.parse(msg));
-	    		
-
 	    		$.each($('#callback-block input'),function(key,value){
 	    			$(value).removeClass('req');
 	    		});

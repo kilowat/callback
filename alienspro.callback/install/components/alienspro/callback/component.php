@@ -66,9 +66,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $a
 			{
 				if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
 					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
+					$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["captcha_sid"] = true;
 			}
-			else
-				$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
+			else{
+					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
+					$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["captcha_word"] = true;
+				}
 
 		}	
 		if(empty($arResult["ERROR_MESSAGE"]))
