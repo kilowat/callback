@@ -16,7 +16,7 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
  * @global CUser $USER
  */
 ?>
-<button id="open-btn">Открыть</button>
+<button id="open-btn">Заказать звонок</button>
 <div id="callback-block" class="alienspro-callback">
 	<!-- start Callback Form -->
 	<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
@@ -62,7 +62,6 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
 		</div>
 		<?endif?>
 		<!-- end Email -->
-
 		<!-- start Theme List -->
 		<?if(!empty($arResult['THEME_LIST'])):?>
 			<div class="mf-theme">
@@ -79,6 +78,23 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
 		</div>
 		<?endif?>
 		<!-- end Theme List -->
+
+		<!--start slider time-->
+		<?if($arParams["USE_TIME"]=="Y"):?>
+			<div class="slider-time">
+				<div class="call-time">
+					<span>
+						Звоните мне с <span id="time-after"><?=$arParams["TIME_BEFORE"]?>:00</span>
+						до <span id="time-before"><?=$arParams["TIME_AFTER"]?>:00</span>
+					</span>
+				</div>				
+				<div id="slider-time"></div>
+					<div class="clocks">
+	           			 <canvas id="canvas" width="160" height="160"></canvas>
+	        		</div>
+			</div>
+		<!--end slider time-->
+		<?endif?>
 		<!-- start Captcha -->
 		<?if($arParams["USE_CAPTCHA"] == "Y"):?>
 			<div class="mf-captcha">
@@ -122,5 +138,18 @@ $(document).ready(function(){
 		title:'Заказ обратного звонка'
 	};
 	alienspro_callback(lang);
+
+	$( "#slider-time" ).slider({
+      range: true,
+      min: <?=$arParams["TIME_BEFORE"]?>,
+      max: <?=$arParams["TIME_AFTER"]?>,
+      values: [ <?=$arParams["TIME_BEFORE"]?>, <?=$arParams["TIME_AFTER"]?> ],
+      step: 1,
+      slide: function( event, ui ) {
+	     $('#time-after').text((ui.values[ 0 ])+':00'); 
+	      $('#time-before').text((ui.values[ 1 ])+':00');
+      }
+    });
+ 
 });
 </script>

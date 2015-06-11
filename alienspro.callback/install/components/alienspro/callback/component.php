@@ -31,6 +31,13 @@ $arParams["OK_TEXT"] = trim($arParams["OK_TEXT"]);
 if($arParams["OK_TEXT"] == '')
 	$arParams["OK_TEXT"] = GetMessage("MF_OK_MESSAGE");
 
+if($arParams["USE_THEME"]=="Y"){
+	$dbrs = callback::getListTheme();
+	while ($result = $dbrs->getNext()){
+		$arResult["THEME_LIST"][]=array("id"=>$result["id"],"name"=>$result["name"]);
+	}
+}
+
 if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $arResult["PARAMS_HASH"] === $_POST["PARAMS_HASH"])){
 	$arResult["ERROR_MESSAGE"] = array();
 	if(check_bitrix_sessid()){
@@ -86,7 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $a
 				"EMAIL_TO" => $arParams["EMAIL_TO"],
 				"PHONE" => $_POST["user_phone"],
 				"THEME" => $_POST["user_theme"],
-				"TIME" => $_POST["user_time"].' '.$_POST["user_day"],
+				"TIME" => $_POST["user_time"],
 			);                      
 			callback::addMsg($arFields["AUTHOR"], $arFields["PHONE"], $arFields["TIME"], $arFields["THEME"],$arFields["AUTHOR_EMAIL"]);
 			if(!empty($arParams["EVENT_MESSAGE_ID"]))
@@ -104,12 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $a
 		
 		$arResult["AUTHOR_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
 		$arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_POST["user_email"]);
-		if($arParams["USE_THEME"]=="Y"){
-			$dbrs = callback::getListTheme();
-			while ($result = $dbrs->getNext()){
-				$arResult["THEME_LIST"][]=array("id"=>$result["id"],"name"=>$result["name"]);
-			}
-		}
+
 	}
 	else
 		$arResult["ERROR_MESSAGE"][] = GetMessage("MF_SESS_EXP");
@@ -155,4 +157,5 @@ if($_POST['ajax']=='y'){
 else{
 	$this->IncludeComponentTemplate();
 }
+
 ?>

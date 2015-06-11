@@ -8,7 +8,7 @@
  *
  * http://api.jqueryui.com/category/theming/
  *
- * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=f6a828&bgTextureHeader=gloss_wave&bgImgOpacityHeader=35&borderColorHeader=e78f08&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=highlight_soft&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=glass&bgImgOpacityDefault=100&borderColorDefault=cccccc&fcDefault=1c94c4&iconColorDefault=ef8c08&bgColorHover=fdf5ce&bgTextureHover=glass&bgImgOpacityHover=100&borderColorHover=fbcb09&fcHover=c77405&iconColorHover=ef8c08&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=fbd850&fcActive=eb8f00&iconColorActive=ef8c08&bgColorHighlight=ffe45c&bgTextureHighlight=highlight_soft&bgImgOpacityHighlight=75&borderColorHighlight=fed22f&fcHighlight=363636&iconColorHighlight=228ef1&bgColorError=b81900&bgTextureError=diagonals_thick&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=diagonals_thick&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=flat&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
+ * To view and modify this theme, visit http://jqueryui.com/themeroller/?ffDefault=Trebuchet%20MS%2CTahoma%2CVerdana%2CArial%2Csans-serif&fwDefault=bold&fsDefault=1.1em&cornerRadius=4px&bgColorHeader=f6a828&bgTextureHeader=gloss_wave&bgImgOpacityHeader=35&borderColorHeader=e78f08&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=eeeeee&bgTextureContent=highlight_soft&bgImgOpacityContent=100&borderColorContent=dddddd&fcContent=333333&iconColorContent=222222&bgColorDefault=f6f6f6&bgTextureDefault=glass&bgImgOpacityDefault=100&borderColorDefault=cccccc&fcDefault=1c94c4&iconColorDefault=ef8c08&bgColorHover=fdf5ce&bgTextureHover=glass&bgImgOpacityHover=100&borderColorHover=003768&fcHover=cfff&iconColorHover=ef8c08&bgColorActive=ffffff&bgTextureActive=glass&bgImgOpacityActive=65&borderColorActive=fbd850&fcActive=eb8f00&iconColorActive=ef8c08&bgColorHighlight=ffe45c&bgTextureHighlight=highlight_soft&bgImgOpacityHighlight=75&borderColorHighlight=fed22f&fcHighlight=363636&iconColorHighlight=228ef1&bgColorError=b81900&bgTextureError=diagonals_thick&bgImgOpacityError=18&borderColorError=cd0a0a&fcError=ffffff&iconColorError=ffd27a&bgColorOverlay=666666&bgTextureOverlay=diagonals_thick&bgImgOpacityOverlay=20&opacityOverlay=50&bgColorShadow=000000&bgTextureShadow=flat&bgImgOpacityShadow=10&opacityShadow=20&thicknessShadow=5px&offsetTopShadow=-5px&offsetLeftShadow=-5px&cornerRadiusShadow=5px
  */
 
 
@@ -37,8 +37,8 @@
 	color: #333333;
 }
 .alienspro-callback .ui-widget-header {
-	border: 1px solid #e78f08;
-	background: #f6a828 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
+	border: 1px solid #002a50;
+	background: #002a50 url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
 	color: #ffffff;
 	font-weight: bold;
 }
@@ -56,6 +56,20 @@
 	font-weight: bold;
 	color: #1c94c4;
 }
+.alienspro-callback .slider-time .ui-slider-handle{
+	background:  url("images/b_l.png") no-repeat scroll 50% 30%;
+    border: medium none;
+    color: #1c94c4;
+    font-weight: bold;
+    width: 24px;
+    top: -8px;
+    cursor: pointer;
+    height: 25px;
+    margin-left: -12px;
+}
+.alienspro-callback .slider-time .ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all {
+    height: 6px;
+}
 .alienspro-callback .ui-state-default a,
 .alienspro-callback .ui-state-default a:link,
 .alienspro-callback .ui-state-default a:visited {
@@ -68,10 +82,20 @@
 .alienspro-callback .ui-state-focus,
 .alienspro-callback .ui-widget-content .ui-state-focus,
 .alienspro-callback .ui-widget-header .ui-state-focus {
-	border: 1px solid #fbcb09;
+	border: 1px solid #003768;
 	background: #fdf5ce url("images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
-	color: #c77405;
+	color: #cfff;
+
+}
+.alienspro-callback .slider-time .ui-slider-handle.ui-state-hover,
+.alienspro-callback .slider-time .ui-slider-handle.ui-state-focus{
+	background:  url("images/b_l.png") no-repeat scroll 50% 30%;
+    border: medium none;
+    color: #1c94c4;
+    font-weight: bold;
+    width: 24px;
+    
 }
 .alienspro-callback .ui-state-hover a,
 .alienspro-callback .ui-state-hover a:hover,
@@ -81,16 +105,17 @@
 .alienspro-callback .ui-state-focus a:hover,
 .alienspro-callback .ui-state-focus a:link,
 .alienspro-callback .ui-state-focus a:visited {
-	color: #c77405;
+	color: #cfff;
 	text-decoration: none;
 }
 .alienspro-callback .ui-state-active,
 .alienspro-callback .ui-widget-content .ui-state-active,
 .alienspro-callback .ui-widget-header .ui-state-active {
-	border: 1px solid #fbd850;
+	border: 1px solid #1c94c4;
 	background: #ffffff url("images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
 	font-weight: bold;
 	color: #eb8f00;
+
 }
 .alienspro-callback .ui-state-active a,
 .alienspro-callback .ui-state-active a:link,
@@ -104,7 +129,7 @@
 .alienspro-callback .ui-state-highlight,
 .alienspro-callback .ui-widget-content .ui-state-highlight,
 .alienspro-callback .ui-widget-header .ui-state-highlight {
-	border: 1px solid #fed22f;
+	border: 1px solid #1c94c4;
 	background: #ffe45c url("images/ui-bg_highlight-soft_75_ffe45c_1x100.png") 50% top repeat-x;
 	color: #363636;
 }
@@ -169,14 +194,14 @@
 	background-image: url("images/ui-icons_ffffff_256x240.png");
 }
 .alienspro-callback .ui-state-default .ui-icon {
-	background-image: url("images/ui-icons_ef8c08_256x240.png");
+	background-image: url("images/ui-icons_228ef1_256x240.png");
 }
 .alienspro-callback .ui-state-hover .ui-icon,
 .alienspro-callback .ui-state-focus .ui-icon {
-	background-image: url("images/ui-icons_ef8c08_256x240.png");
+	background-image: url("images/ui-icons_228ef1_256x240.png");
 }
 .alienspro-callback .ui-state-active .ui-icon {
-	background-image: url("images/ui-icons_ef8c08_256x240.png");
+	background-image: url("images/ui-icons_228ef1_256x240.png");
 }
 .alienspro-callback .ui-state-highlight .ui-icon {
 	background-image: url("images/ui-icons_228ef1_256x240.png");

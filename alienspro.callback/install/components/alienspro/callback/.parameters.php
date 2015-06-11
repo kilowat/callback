@@ -16,7 +16,7 @@ $arComponentParameters = array(
 		"USE_CAPTCHA" => Array(
 			"NAME" => GetMessage("MFP_CAPTCHA"), 
 			"TYPE" => "CHECKBOX",
-			"DEFAULT" => "Y", 
+			"DEFAULT" => "N", 
 			"PARENT" => "BASE",
 		),
                 "USE_THEME"=>array(
