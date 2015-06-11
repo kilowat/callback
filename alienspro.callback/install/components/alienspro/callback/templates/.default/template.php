@@ -3,9 +3,11 @@ if (! defined ( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true)
 	die ();
 
 $APPLICATION->AddHeadScript ( 'http://code.jquery.com/jquery-1.11.0.min.js' );
-$APPLICATION->AddHeadScript ( '/fancybox/source/jquery.fancybox.pack.js');
-
-/*
+$APPLICATION->AddHeadScript ( 'http://code.jquery.com/ui/1.11.4/jquery-ui.js' );
+$APPLICATION->AddHeadString('<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">');
+ 
+/*work with ajax*/
+ /*
  * Bitrix vars
  *
  * @var array $arParams
@@ -14,21 +16,8 @@ $APPLICATION->AddHeadScript ( '/fancybox/source/jquery.fancybox.pack.js');
  * @global CUser $USER
  */
 ?>
+<button id="open-btn">Открыть</button>
 <div id="callback-block">
-
-	<!-- start Show Eror/Ok Message -->
-	<?
-	
-if (! empty ( $arResult ["ERROR_MESSAGE"] )) {
-		foreach ( $arResult ["ERROR_MESSAGE"] as $v )
-			ShowError ( $v );
-	}
-	if (strlen ( $arResult ["OK_MESSAGE"] ) > 0) {
-		?><div class="mf-ok-text"><?=$arResult["OK_MESSAGE"]?></div><?
-	}
-	?>
-	<!-- end Show Eror/Ok Message -->
-
 	<!-- start Callback Form -->
 	<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
 		
@@ -55,7 +44,7 @@ if (! empty ( $arResult ["ERROR_MESSAGE"] )) {
 					<span class="mf-req">*</span>
 				<?endif?>
 			</div>
-			<input id="phone-mask" type="text" name="user_phone" value="">
+			<input id="user_phone" type="text" name="user_phone" value="">
 		</div>
 		<!-- end Phone -->
 
@@ -100,7 +89,7 @@ if (! empty ( $arResult ["ERROR_MESSAGE"] )) {
 					width="150" height="40" alt="CAPTCHA">
 			</div>
 			<div class="captcha-form">
-				<input type="text" name="captcha_word" size="30" maxlength="50"
+				<input id="captcha_word" type="text" name="captcha_word" size="30" maxlength="50"
 					value="">
 			</div>
 			<div class="captcha-clear"></div>
@@ -113,11 +102,25 @@ if (! empty ( $arResult ["ERROR_MESSAGE"] )) {
 		<!-- end Captcha -->
 
 		<!-- start Bottons -->
-		<input type="hidden" name="PARAMS_HASH"
-			value="<?=$arResult["PARAMS_HASH"]?>"> <input id="ajax-form-submit"
-			class="send-button" type="submit" name="submit"
-			value="<?=GetMessage("MFT_SUBMIT")?>">
+		<div class="row-button">
+			<input id = "PARAMS_HASH" type="hidden" name="PARAMS_HASH"
+				value="<?=$arResult["PARAMS_HASH"]?>"> <input id="ajax-form-submit"
+				class="send-button" type="submit" name="submit"
+				value="<?=GetMessage("MFT_SUBMIT")?>">
+		</div>
 		<!-- end Bottons -->
 	</form>
 	<!-- end Callback Form -->
+
+<!--start alert msg-->
+
+<!-- end alert msg -->
 </div>
+<script>
+$(document).ready(function(){
+	var lang={
+		title:'Заказ обратного звонка'
+	};
+	alienspro_callback(lang);
+});
+</script>

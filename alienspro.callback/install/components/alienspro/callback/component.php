@@ -135,16 +135,24 @@ if(empty($arResult["ERROR_MESSAGE"]))
 			$arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_SESSION["MF_EMAIL"]);
 	}
 }
+$arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]['success']='no';
 
 if($arParams["USE_CAPTCHA"] == "Y")
 	$arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
 
-	if($_POST['ajax']=='y'){
-		$GLOBALS['APPLICATION']->RestartBuffer(); 
-		echo json_encode($arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]);
+if($_GET['success']==$arResult["PARAMS_HASH"]){
+		$GLOBALS['APPLICATION']->RestartBuffer();
+		echo json_encode(array('success'=>$arParams["OK_TEXT"]));
 		die();
-	}
-	else{
-		$this->IncludeComponentTemplate();
-	}
+}
+
+
+if($_POST['ajax']=='y'){
+	$GLOBALS['APPLICATION']->RestartBuffer();
+	echo json_encode($arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]);
+	die();
+}
+else{
+	$this->IncludeComponentTemplate();
+}
 ?>
