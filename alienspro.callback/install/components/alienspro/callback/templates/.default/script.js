@@ -4,15 +4,22 @@
 var alienspro_callback = function(lang){
 	$("#user_phone").mask("+7(999) 999-9999");
 	//$('#callback-block')alignCenterScreen();
+	$('.ui-dialog').wrap('<div class="abc" />');
 	var dialog = $('#callback-block').dialog({
-		 autoOpen: false,
-	      height: 'auto',
-	      width: 350,
-	      modal: true,
-	      title:lang.title,
-	      close: function() {             
-	      }
-	    });
+		autoOpen: false,
+	    height: 'auto',
+	    width: 350,
+	    modal: true,
+	    title:lang.title,
+	    close: function() {             
+	    },   
+	    create: function(event, ui){
+        	$('.ui-dialog').wrap('<div class="alienspro-callback" />');
+		},
+		open: function(event, ui){
+		    $('.ui-widget-overlay').wrap('<div class="alienspro-callback" />');
+		},
+	});
 	form = dialog.find( "form" ).on( "submit", function( event ) {
 		
 	    event.preventDefault();

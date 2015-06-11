@@ -3,12 +3,9 @@ if (! defined ( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true)
 	die ();
 
 $APPLICATION->AddHeadScript ( 'http://code.jquery.com/jquery-1.11.0.min.js' );
-//$APPLICATION->AddHeadScript ( 'http://code.jquery.com/ui/1.11.4/jquery-ui.js' );
 $APPLICATION->AddHeadScript ( $this->GetFolder().'/jquery-ui.min.js' );
-//$APPLICATION->AddHeadString('<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">');
-
-$APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.css" type="text/css" rel="stylesheet" />',true);
- 
+$APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.min.css" type="text/css" rel="stylesheet" />',true);
+$APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.css" type="text/css" rel="stylesheet" />',true);
 /*work with ajax*/
  /*
  * Bitrix vars
@@ -20,7 +17,7 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.css" t
  */
 ?>
 <button id="open-btn">Открыть</button>
-<div id="callback-block">
+<div id="callback-block" class="alienspro-callback">
 	<!-- start Callback Form -->
 	<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
 		
