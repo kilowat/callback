@@ -3,8 +3,11 @@ if (! defined ( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true)
 	die ();
 
 $APPLICATION->AddHeadScript ( 'http://code.jquery.com/jquery-1.11.0.min.js' );
-$APPLICATION->AddHeadScript ( 'http://code.jquery.com/ui/1.11.4/jquery-ui.js' );
-$APPLICATION->AddHeadString('<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">');
+//$APPLICATION->AddHeadScript ( 'http://code.jquery.com/ui/1.11.4/jquery-ui.js' );
+$APPLICATION->AddHeadScript ( $this->GetFolder().'/jquery-ui.min.js' );
+//$APPLICATION->AddHeadString('<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">');
+
+$APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.css" type="text/css" rel="stylesheet" />',true);
  
 /*work with ajax*/
  /*
