@@ -47,9 +47,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $a
 				$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["user_name"] = true;
 				$arResult["ERROR_MESSAGE"]["NAME"] =  GetMessage("MF_REQ_NAME");		
 			}
-			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_email"]) <= 1){
+			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("EMAIL", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_email"]) <= 1&& $arParams["USE_EMAIL"] == "Y"){
 				$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["user_email"] = true;
-				$arResult["ERROR_MESSAGE"]["NAME"] =  GetMessage("MF_REQ_EMAIL");	
+				$arResult["ERROR_MESSAGE"]["EMAIL"] =  GetMessage("MF_REQ_EMAIL");	
 				
 			}   
 			if((empty($arParams["REQUIRED_FIELDS"]) || in_array("PHONE", $arParams["REQUIRED_FIELDS"])) && strlen($_POST["user_phone"]) <= 1){
