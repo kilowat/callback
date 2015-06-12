@@ -1,8 +1,8 @@
 <?
 if (! defined ( "B_PROLOG_INCLUDED" ) || B_PROLOG_INCLUDED !== true)
 	die ();
-
-$APPLICATION->AddHeadScript ( 'http://code.jquery.com/jquery-1.11.0.min.js' );
+if($arParams["USE_JQUERY"]=="Y")
+	$APPLICATION->AddHeadScript ( 'http://code.jquery.com/jquery-2.1.4.min.js' );
 $APPLICATION->AddHeadScript ( $this->GetFolder().'/jquery-ui.min.js' );
 $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.min.css" type="text/css" rel="stylesheet" />',true);
 $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.css" type="text/css" rel="stylesheet" />',true);
@@ -16,7 +16,7 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
  * @global CUser $USER
  */
 ?>
-<button id="open-btn">Заказать звонок</button>
+<button id="open-btn" class="send-button">Заказать звонок</button>
 <div id="callback-block" class="alienspro-callback">
 	<!-- start Callback Form -->
 	<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
@@ -62,6 +62,7 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
 		</div>
 		<?endif?>
 		<!-- end Email -->
+
 		<!-- start Theme List -->
 		<?if(!empty($arResult['THEME_LIST'])):?>
 			<div class="mf-theme">
@@ -127,18 +128,23 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
 		<!-- end Bottons -->
 	</form>
 	<!-- end Callback Form -->
-
-<!--start alert msg-->
-
-<!-- end alert msg -->
 </div>
 <script>
+/*Check jquery*/
+(window.jQuery)||alert('<?=GetMessage("MFT_JQUERY_NOT_INSALL")?>');
+
 $(document).ready(function(){
+
 	var lang={
-		title:'Заказ обратного звонка'
+		title:'<?=GetMessage("MFT_TITLE")?>'
 	};
+	/*init dialog and clock*/
 	alienspro_callback(lang);
 
+	/*init phone mask, if you want to modify mask, just edit this options, see http://digitalbush.com/projects/masked-input-plugin/*/
+	$("#user_phone").mask("+7(999) 999-9999");
+
+	/*init ui slider*/
 	$( "#slider-time" ).slider({
       range: true,
       min: <?=$arParams["TIME_BEFORE"]?>,
@@ -150,6 +156,5 @@ $(document).ready(function(){
 	      $('#time-before').text((ui.values[ 1 ])+':00');
       }
     });
- 
 });
 </script>
