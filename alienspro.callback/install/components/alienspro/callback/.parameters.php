@@ -19,40 +19,55 @@ $arComponentParameters = array(
 			"DEFAULT" => "N", 
 			"PARENT" => "BASE",
 		),
-                "USE_THEME"=>array(
-                    "NAME" => GetMessage("USE_THEME"), 
-                    "TYPE" => "CHECKBOX",
-                    "PARENT" => "BASE",
-                    "DEFAULT" => "Y"),
-               "USE_EMAIL"=>array(
-                    "NAME" => GetMessage("USE_EMAIL"), 
-                    "TYPE" => "CHECKBOX",
-                    "PARENT" => "BASE",
-                    "DEFAULT" => "N"),
-               "USE_TIME"=>array(
-                    "NAME" => GetMessage("USE_TIME"), 
-                    "TYPE" => "CHECKBOX",
-                    "PARENT" => "BASE",
-                    "DEFAULT" => "Y"),
+        "USE_THEME"=>array(
+            "NAME" => GetMessage("USE_THEME"), 
+            "TYPE" => "CHECKBOX",
+            "PARENT" => "BASE",
+            "DEFAULT" => "Y"
+        ),
+        "USE_EMAIL"=>array(
+            "NAME" => GetMessage("USE_EMAIL"), 
+            "TYPE" => "CHECKBOX",
+            "PARENT" => "BASE",
+            "DEFAULT" => "N"
+        ),
+        "USE_TIME"=>array(
+            "NAME" => GetMessage("USE_TIME"), 
+            "TYPE" => "CHECKBOX",
+            "PARENT" => "BASE",
+            "DEFAULT" => "Y"
+        ),
+        "USE_PHONE_MASK"=>array(
+            "NAME" => GetMessage("USE_PHONE_MASK"), 
+            "TYPE" => "CHECKBOX",
+            "PARENT" => "BASE",
+            "DEFAULT" => "Y"
+        ),
+		"PHONE_MASK" => Array(
+			"NAME" => GetMessage("PHONE_MASK"), 
+			"TYPE" => "STRING",
+			"DEFAULT" => '+7(999) 999-9999', 
+			"PARENT" => "BASE",
+		),
 		"OK_TEXT" => Array(
 			"NAME" => GetMessage("MFP_OK_MESSAGE"), 
 			"TYPE" => "STRING",
 			"DEFAULT" => GetMessage("MFP_OK_TEXT"), 
 			"PARENT" => "BASE",
 		),
-                "TIME_BEFORE" => Array(
+        "TIME_BEFORE" => Array(
 			"NAME" => GetMessage("TIME_BEFORE"), 
 			"TYPE" => "INTEGER",
 			"DEFAULT" => 8, 
 			"PARENT" => "BASE",
 		),
-                "TIME_AFTER" => Array(
+        "TIME_AFTER" => Array(
 			"NAME" => GetMessage("TIME_AFTER"), 
 			"TYPE" => "INTEGER",
 			"DEFAULT" => 18, 
 			"PARENT" => "BASE",
 		),
-                "USE_JQUERY" => Array(
+        "USE_JQUERY" => Array(
 			"NAME" => GetMessage("USE_JQUERY"), 
 			"TYPE" => "CHECKBOX",
 			"DEFAULT" => "N", 
@@ -73,7 +88,6 @@ $arComponentParameters = array(
 			"COLS"=>25, 
 			"PARENT" => "BASE",
 		),
-
 		"EVENT_MESSAGE_ID" => Array(
 			"NAME" => GetMessage("MFP_EMAIL_TEMPLATES"), 
 			"TYPE"=>"LIST", 

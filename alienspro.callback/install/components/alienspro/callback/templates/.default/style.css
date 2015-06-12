@@ -62,7 +62,7 @@ div.mf-name input, div.mf-email input, div.mf-phone input, div.mf-theme select
 
 
 div.mf-captcha {
-
+	position: relative;
 }
 #captcha_word{
 	float: right;
@@ -89,6 +89,8 @@ div.captcha-form input {
 .mf-captcha-text {
 	font-size: 12px;
 	text-align: center;
+	position: relative;
+	width: 184px;
 }
 .mf-captcha-image img {
   height: 40px;
@@ -163,3 +165,13 @@ div.mf-ok-text {
 	text-align: center;
 }
 
+#reload-captcha {
+    position: absolute;
+    right: 140px;
+    top: 15px;
+    background: url(images/gtk-refresh_3788.png);
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    cursor: pointer;
+}

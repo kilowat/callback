@@ -99,21 +99,22 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
 		<!-- start Captcha -->
 		<?if($arParams["USE_CAPTCHA"] == "Y"):?>
 			<div class="mf-captcha">
-			<div class="mf-captcha-image">
-				<input id="captcha_sid" type="hidden" name="captcha_sid"
-					value="<?=$arResult["capCode"]?>"> <img
-					src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>"
-					width="150" height="40" alt="CAPTCHA">
-			</div>
-			<div class="captcha-form">
-				<input id="captcha_word" type="text" name="captcha_word" size="30" maxlength="50"
-					value="">
-			</div>
-			<div class="captcha-clear"></div>
-			<div class="mf-captcha-text">
-					<?=GetMessage("MFT_CAPTCHA")?>
-					<span class="mf-req">*</span>
-			</div>
+					<div class="mf-captcha-image">
+						<input id="captcha_sid" type="hidden" name="captcha_sid"
+							value="<?=$arResult["capCode"]?>"> <img id="captcha_img"
+							src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>"
+							width="150" height="40" alt="CAPTCHA">
+					</div>
+					<div id="reload-captcha"></div>
+				<div class="captcha-form">
+					<input id="captcha_word" type="text" name="captcha_word" size="30" maxlength="50"
+						value="">
+				</div>
+				
+				<div class="mf-captcha-text">
+						<?=GetMessage("MFT_CAPTCHA")?>
+						<span class="mf-req">*</span>
+				</div>
 		</div>
 		<?endif;?>
 		<!-- end Captcha -->
@@ -140,10 +141,11 @@ $(document).ready(function(){
 	};
 	/*init dialog and clock*/
 	alienspro_callback(lang);
-
+	
+	<?if($arParams["USE_PHONE_MASK"] == "Y"):?>
 	/*init phone mask, if you want to modify mask, just edit this options, see http://digitalbush.com/projects/masked-input-plugin/*/
-	$("#user_phone").mask("+7(999) 999-9999");
-
+		$("#user_phone").mask("<?=$arParams['PHONE_MASK']?>");
+	<?endif?>
 	/*init ui slider*/
 	$( "#slider-time" ).slider({
       range: true,

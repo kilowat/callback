@@ -14,6 +14,8 @@ $MESS ['USE_THEME'] = "Выводить тему";
 $MESS ['USE_EMAIL'] = "Выводить почту";
 $MESS ['USE_DATE'] = "Выводить дату";
 $MESS ['USE_TIME'] = "Выводить время";
-$MESS ['TIME_BEFORE'] = "С";
-$MESS ['TIME_AFTER'] = "До";
+$MESS ['TIME_BEFORE'] = "Звонить с";
+$MESS ['TIME_AFTER'] = "Звонить до";
+$MESS ['USE_PHONE_MASK'] = "Использовать маску нормера телефона";
+$MESS ['PHONE_MASK'] = "Маска номера телефона";
 ?>

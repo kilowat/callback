@@ -18,6 +18,13 @@ if(!CModule::IncludeModule("alienspro.callback")){
  * @global CUser $USER
  */
 
+/**reload captch**/
+if($_POST['reload_captcha']=='y'){
+	$GLOBALS['APPLICATION']->RestartBuffer();
+	echo json_encode($arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode()));
+	die();
+}
+/*********************/
 
 $arResult["PARAMS_HASH"] = md5(serialize($arParams).$this->GetTemplateName());
 $arParams["USE_CAPTCHA"] = (($arParams["USE_CAPTCHA"] != "N" && !$USER->IsAuthorized()) ? "Y" : "N");
@@ -71,9 +78,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $a
 			$captchaPass = COption::GetOptionString("main", "captcha_password", "");
 			if (strlen($captcha_word) > 0 && strlen($captcha_code) > 0)
 			{
-				if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass))
+				if (!$cpt->CheckCodeCrypt($captcha_word, $captcha_code, $captchaPass)){
 					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTCHA_WRONG");
 					$arResult["ERROR_MESSAGE"]["COSTUM_ERROR"]["captcha_sid"] = true;
+				}
 			}
 			else{
 					$arResult["ERROR_MESSAGE"][] = GetMessage("MF_CAPTHCA_EMPTY");
@@ -139,7 +147,7 @@ if(empty($arResult["ERROR_MESSAGE"]))
 }
 $arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]['success']='no';
 
-if($arParams["USE_CAPTCHA"] == "Y")
+if($arParams["USE_CAPTCHA"] == "Y" && $_POST['reload_captcha']!='y')
 	$arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
 
 if($_GET['success']==$arResult["PARAMS_HASH"]){
