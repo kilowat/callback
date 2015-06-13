@@ -10,4 +10,10 @@ $MESS ['CALLBACK_DATE'] = "Дата";
 $MESS ['CALLBACK_DELETE'] = "Удалить"; 
 $MESS ['CALLBACK_PAGE_TITLE'] = "Список заявок на звонок";
 $MESS ['CALLBACK_ANSWER'] = "Обработать";
+$MESS ['CALLBACK_STATUS'] = "Статус";
+$MESS ['CALLBACK_USER_ANSWER'] = "Обработал";
+$MESS ['CALLBACK_DATE_ANSWER'] = "Дата обработки";
+
+
+
 ?>
