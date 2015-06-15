@@ -85,8 +85,9 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
 			<div class="slider-time">
 				<div class="call-time">
 					<span>
-						Звоните мне с <span id="time-after"><?=$arParams["TIME_BEFORE"]?>:00</span>
-						до <span id="time-before"><?=$arParams["TIME_AFTER"]?>:00</span>
+						<?=GetMessage("CALL_ME")?>
+						<span id="time-after"><?=$arParams["TIME_BEFORE"]?>:00</span>
+						<?=GetMessage("BEFORE")?> <span id="time-before"><?=$arParams["TIME_AFTER"]?>:00</span>
 					</span>
 				</div>				
 				<div id="slider-time"></div>
