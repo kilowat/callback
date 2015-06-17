@@ -63,7 +63,7 @@ Class alienspro_callback extends CModule{
 			
 	function UnInstallFiles(){
 		DeleteDirFiles($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/alienspro.callback/install/admin", $_SERVER["DOCUMENT_ROOT"]."/bitrix/admin");
-		DeleteDirFilesEx("/bitrix/components/alienspro/");
+		DeleteDirFilesEx("/bitrix/components/alienspro/callback/");
 		DeleteDirFiles( $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/alienspro.callback/install/themes/.default/' , $_SERVER['DOCUMENT_ROOT'] . '/bitrix/themes/.default' );  
 		DeleteDirFilesEx( '/bitrix/themes/.default/icons/callback' );
 		DeleteDirFilesEx("/bitrix/gadgets/alienspro/");
