@@ -150,9 +150,12 @@ $(document).ready(function(){
 	/*init ui slider*/
 	$( "#slider-time" ).slider({
       range: true,
-      min: <?=$arParams["TIME_BEFORE"]?>,
-      max: <?=$arParams["TIME_AFTER"]?>,
-      values: [ <?=$arParams["TIME_BEFORE"]?>, <?=$arParams["TIME_AFTER"]?> ],
+      min: <?=$arParams["TIME_BEFORE"]>0?$arParams["TIME_BEFORE"]:8?>,
+      max: <?=$arParams["TIME_AFTER"]>0?$arParams["TIME_AFTER"]:20?>,
+      values: [ 
+		<?=$arParams["TIME_BEFORE"]>0?$arParams["TIME_BEFORE"]:8?>, 
+		<?=$arParams["TIME_AFTER"]>0?$arParams["TIME_AFTER"]:20?> 
+	],
       step: 1,
       slide: function( event, ui ) {
 	     $('#time-after').text((ui.values[ 0 ])+':00'); 
