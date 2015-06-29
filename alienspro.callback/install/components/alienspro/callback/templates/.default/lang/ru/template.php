@@ -1,5 +1,6 @@
 <?
 $MESS ['MFT_TITLE'] = "Заказ обратного звонка";
+$MESS ['MFT_PHONE_TAKE'] = "Заказать обратный звонок";
 $MESS ['MFT_NAME'] = "Ваше имя";
 $MESS ['MFT_EMAIL'] = "Ваш Email";
 $MESS ['MFT_PHONE'] = "Ваш телефон";
