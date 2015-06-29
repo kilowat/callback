@@ -1,5 +1,6 @@
 <?
 $MESS ['TITLE'] = "Request a call";
+$MESS ['MFT_PHONE_TAKE'] = "Call me";
 $MESS ['MFT_NAME'] = "Your name";
 $MESS ['MFT_EMAIL'] = "Your Email";
 $MESS ['MFT_PHONE'] = "Your phone nomber";
