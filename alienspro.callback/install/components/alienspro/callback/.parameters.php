@@ -9,7 +9,7 @@ if($site !== false)
 $arEvent = Array();
 $dbType = CEventMessage::GetList($by="ID", $order="DESC", $arFilter);
 while($arType = $dbType->GetNext())
-	$arEvent[$arType["ID"]] = "[".$arType["ID"]."] ".$arType["CALLBACK"];
+	$arEvent[$arType["ID"]] = "[".$arType["ID"]."] ".$arType["EVENT_NAME"];
 
 $arComponentParameters = array(
 	"PARAMETERS" => array(
