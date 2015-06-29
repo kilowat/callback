@@ -16,7 +16,7 @@ $APPLICATION->AddHeadString('<link href="'.$this->GetFolder().'/jquery-ui.theme.
  * @global CUser $USER
  */
 ?>
-<button id="open-btn" class="send-button">GetMessage("MFT_PHONE_TAKE")</button>
+<button id="open-btn" class="send-button"><?=GetMessage("MFT_PHONE_TAKE")?></button>
 <div id="callback-block" class="alienspro-callback">
 	<!-- start Callback Form -->
 	<form action="<?=POST_FORM_ACTION_URI?>" method="POST">
