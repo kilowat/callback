@@ -114,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"  && (!isset($_POST["PARAMS_HASH"]) || $a
 				CEvent::Send($arParams["EVENT_NAME"], SITE_ID, $arFields);
 				$_SESSION["MF_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
 				$_SESSION["MF_EMAIL"] = htmlspecialcharsbx($_POST["user_email"]);
-				LocalRedirect($APPLICATION->GetCurPageParam("success=".$arResult["PARAMS_HASH"], Array("success")));
+				
 		}
 		
 		$arResult["AUTHOR_NAME"] = htmlspecialcharsbx($_POST["user_name"]);
@@ -145,25 +145,22 @@ if(empty($arResult["ERROR_MESSAGE"]))
 			$arResult["AUTHOR_EMAIL"] = htmlspecialcharsbx($_SESSION["MF_EMAIL"]);
 	}
 }
-$arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]['success']='no';
+
 
 if($arParams["USE_CAPTCHA"] == "Y" && $_POST['reload_captcha']!='y')
 	$arResult["capCode"] =  htmlspecialcharsbx($APPLICATION->CaptchaGetCode());
 
-if($_GET['success']==$arResult["PARAMS_HASH"]){
-		$GLOBALS['APPLICATION']->RestartBuffer();
-		echo json_encode(array('success'=>$arParams["OK_TEXT"]));
-		die();
-}
-
-
-if($_POST['ajax']=='y'){
+if($_POST['ajax']=='y' && count($arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]) > 0){
+	$arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]['success']='no';
 	$GLOBALS['APPLICATION']->RestartBuffer();
 	echo json_encode($arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]);
 	die();
 }
-else{
-	$this->IncludeComponentTemplate();
+if($_POST['ajax']=='y' && count($arResult ["ERROR_MESSAGE"]["COSTUM_ERROR"]) == 0){
+		$GLOBALS['APPLICATION']->RestartBuffer();
+		echo json_encode(array('success'=>$arParams["OK_TEXT"]));
+		die();
 }
-
+if($_POST['ajax']!='y')
+	$this->IncludeComponentTemplate();
 ?>
