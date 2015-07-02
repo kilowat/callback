@@ -1,1 +1,1 @@
-<?$MESS ['CALLBACK_UNINSTALL_OK'] = "Óäàëåíèÿ ìîäóëÿ";?>
+<?$MESS ['CALLBACK_UNINSTALL_OK'] = "Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ñ Ð¼Ð¾Ð´ÑƒÐ»Ñ";?>

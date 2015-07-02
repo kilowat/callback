@@ -1,4 +1,4 @@
 <?
-$MESS ['CALLBACK_COMPONENT_NAME'] = "Заявка на обратный звонок .PRO";
-$MESS ['CALLBACK_COMPONENT_DESCR'] = "Заказ посетителем сайта обратного звонка";
+$MESS ['CALLBACK_COMPONENT_NAME'] = "Р—Р°СЏРІРєР° РЅР° РѕР±СЂР°С‚РЅС‹Р№ Р·РІРѕРЅРѕРє .PRO";
+$MESS ['CALLBACK_COMPONENT_DESCR'] = "Р—Р°РєР°Р· РїРѕСЃРµС‚РёС‚РµР»РµРј СЃР°Р№С‚Р° РѕР±СЂР°С‚РЅРѕРіРѕ Р·РІРѕРЅРєР°";
 ?>

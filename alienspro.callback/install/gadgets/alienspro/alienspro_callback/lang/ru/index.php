@@ -1,13 +1,13 @@
 <?
-$MESS["GD_CALLBACK_NAME"] = "Ôèî";
-$MESS["GD_CALLBACK_PHONE"] = "Òåëåôîí";
+$MESS["GD_CALLBACK_NAME"] = "Ð¤Ð¸Ð¾";
+$MESS["GD_CALLBACK_PHONE"] = "Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½";
 $MESS["GD_CALLBACK_EMAIL"] = "Email";
-$MESS["GD_CALLBACK_TIME_T"] = "Âðåìÿ çâîíêà";
-$MESS["GD_CALLBACK_THEME"] = "Òåìà";
-$MESS["GD_CALLBACK_DATE_T"] = "Äàòà";
-$MESS["GD_CALLBACK_STATUS"] = "Ñòàòóñ";
-$MESS["YES"] = "Îáðàáîòàí";
-$MESS["NO"] = "Íåîáðàáîòàí";
-$MESS["GD_CALLBACK_USER_ANSWER"] = "Îáðàáîòàë";
-$MESS["GD_CALLBACK_DATE_ANSWER"] = "Äàòà îáðàáîòêè";
+$MESS["GD_CALLBACK_TIME_T"] = "Ð’Ñ€ÐµÐ¼Ñ Ð·Ð²Ð¾Ð½ÐºÐ°";
+$MESS["GD_CALLBACK_THEME"] = "Ð¢ÐµÐ¼Ð°";
+$MESS["GD_CALLBACK_DATE_T"] = "Ð”Ð°Ñ‚Ð°";
+$MESS["GD_CALLBACK_STATUS"] = "Ð¡Ñ‚Ð°Ñ‚ÑƒÑ";
+$MESS["YES"] = "ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð½";
+$MESS["NO"] = "ÐÐµÐ¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð½";
+$MESS["GD_CALLBACK_USER_ANSWER"] = "ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð»";
+$MESS["GD_CALLBACK_DATE_ANSWER"] = "Ð”Ð°Ñ‚Ð° Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸";
 ?>

@@ -1,11 +1,11 @@
 <?
-$MESS ['call_tab_callback'] = "Ðåäàêòèðîâàòü òåìó"; 
-$MESS ['call_tab_callback_title'] = "Ðåäàêòèðîâàòü òåìó"; 
-$MESS ['call_save_error'] = "Îøèáêà ñîõðàíåíèÿ"; 
-$MESS ['call_title_edit'] = "Ðåäàêòèðîâàòü òåìó"; 
-$MESS ['call_title_add'] = "Äîáàâèòü òåìó"; 
-$MESS ['call_list'] = "Ñïèñîê òåì"; 
-$MESS ['call_list_title'] = "Ñïèñîê òåì"; 
-$MESS ['call_saved'] = "Óñïåøíî ñîõðàíåíî"; 
-$MESS ['call_name'] = "Íàçâàíèå òåìû"; 
+$MESS ['call_tab_callback'] = "Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ‚ÐµÐ¼Ñƒ"; 
+$MESS ['call_tab_callback_title'] = "Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ‚ÐµÐ¼Ñƒ"; 
+$MESS ['call_save_error'] = "ÐžÑˆÐ¸Ð±ÐºÐ° ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ"; 
+$MESS ['call_title_edit'] = "Ð ÐµÐ´Ð°ÐºÑ‚Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒ Ñ‚ÐµÐ¼Ñƒ"; 
+$MESS ['call_title_add'] = "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ñ‚ÐµÐ¼Ñƒ"; 
+$MESS ['call_list'] = "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ñ‚ÐµÐ¼"; 
+$MESS ['call_list_title'] = "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ñ‚ÐµÐ¼"; 
+$MESS ['call_saved'] = "Ð£ÑÐ¿ÐµÑˆÐ½Ð¾ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¾"; 
+$MESS ['call_name'] = "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ‚ÐµÐ¼Ñ‹"; 
 ?>

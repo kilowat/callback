@@ -1,15 +1,15 @@
 <?php
-$MESS['GD_CALLBACK_COUNT'] = "Êîëè÷åñòâî âûâîäà çàïèñåé";
-$MESS['GD_CALLBACK_THEME'] = "Òåìû";
-$MESS['USE_ROW'] = "Êàêèå êîëîíêè âûâîäèòü";
-$MESS["GD_CALLBACK_NAME"] = "ÔÈÎ";
-$MESS["GD_CALLBACK_PHONE"] = "Òåëåôîí";
+$MESS['GD_CALLBACK_COUNT'] = "ÐšÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð²Ñ‹Ð²Ð¾Ð´Ð° Ð·Ð°Ð¿Ð¸ÑÐµÐ¹";
+$MESS['GD_CALLBACK_THEME'] = "Ð¢ÐµÐ¼Ñ‹";
+$MESS['USE_ROW'] = "ÐšÐ°ÐºÐ¸Ðµ ÐºÐ¾Ð»Ð¾Ð½ÐºÐ¸ Ð²Ñ‹Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ";
+$MESS["GD_CALLBACK_NAME"] = "Ð¤Ð˜Ðž";
+$MESS["GD_CALLBACK_PHONE"] = "Ð¢ÐµÐ»ÐµÑ„Ð¾Ð½";
 $MESS["GD_CALLBACK_EMAIL"] = "E-mail";
-$MESS["GD_CALLBACK_TIME_T"] = "Âðåìÿ çâîíêà";
-$MESS["GD_CALLBACK_THEME"] = "Òåìà";
-$MESS["GD_CALLBACK_COLOR_THEME"] = "Öâåòîâàÿ òåìà";
-$MESS["GD_CALLBACK_DATE_T"] = "Äàòà";
-$MESS["GD_CALLBACK_STATUS"] = "Ñòàòóñ";
-$MESS["GD_CALLBACK_USER_ANSWER"] = "Îáðàáîòàë";
-$MESS["GD_CALLBACK_DATE_ANSWER"] = "Äàòà îáðàáîòêè";
+$MESS["GD_CALLBACK_TIME_T"] = "Ð’Ñ€ÐµÐ¼Ñ Ð·Ð²Ð¾Ð½ÐºÐ°";
+$MESS["GD_CALLBACK_THEME"] = "Ð¢ÐµÐ¼Ð°";
+$MESS["GD_CALLBACK_COLOR_THEME"] = "Ð¦Ð²ÐµÑ‚Ð¾Ð²Ð°Ñ Ñ‚ÐµÐ¼Ð°";
+$MESS["GD_CALLBACK_DATE_T"] = "Ð”Ð°Ñ‚Ð°";
+$MESS["GD_CALLBACK_STATUS"] = "Ð¡Ñ‚Ð°Ñ‚ÑƒÑ";
+$MESS["GD_CALLBACK_USER_ANSWER"] = "ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð»";
+$MESS["GD_CALLBACK_DATE_ANSWER"] = "Ð”Ð°Ñ‚Ð° Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸";
 ?>

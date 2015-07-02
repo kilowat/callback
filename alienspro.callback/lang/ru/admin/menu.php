@@ -1,5 +1,5 @@
 <?
-$MESS ['CALLBACK_LIST_MSG'] = "Ñïèñîê çàÿâîê íà çâîíîê";
-$MESS ['CALLBACK_NAME'] = "Îáðàòíûå çâîíêè";
-$MESS ['CALLBACK_THEME'] = "Òåìû çàÿâîê";
+$MESS ['CALLBACK_LIST_MSG'] = "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð·Ð°ÑÐ²Ð¾Ðº Ð½Ð° Ð·Ð²Ð¾Ð½Ð¾Ðº";
+$MESS ['CALLBACK_NAME'] = "ÐžÐ±Ñ€Ð°Ñ‚Ð½Ñ‹Ðµ Ð·Ð²Ð¾Ð½ÐºÐ¸";
+$MESS ['CALLBACK_THEME'] = "Ð¢ÐµÐ¼Ñ‹ Ð·Ð°ÑÐ²Ð¾Ðº";
 ?>
