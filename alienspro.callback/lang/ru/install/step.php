@@ -1,1 +1,1 @@
-<?$MESS ['CALLBACK_INSTALL_OK'] = "Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ° Ð¼Ð¾Ð´ÑƒÐ»Ñ";?> 
+<?$MESS ['CALLBACK_INSTALL_OK'] = "Óñòàíîâêà ìîäóëÿ";?> 

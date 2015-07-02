@@ -1,18 +1,18 @@
 <?
-$MESS ['CALLBACK_DELETE'] = "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ"; 
-$MESS ['CALLBACK_PAGES'] = "Ð¡Ñ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹"; 
-$MESS ['CALLBACK_NAME_LIST'] = "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ"; 
-$MESS ['CALLBACK_PHONE'] = "ÐÐ¾Ð¼ÐµÑ€ Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð°"; 
+$MESS ['CALLBACK_DELETE'] = "Óäàëèòü"; 
+$MESS ['CALLBACK_PAGES'] = "Ñòðàíèöû"; 
+$MESS ['CALLBACK_NAME_LIST'] = "Íàçâàíèå"; 
+$MESS ['CALLBACK_PHONE'] = "Íîìåð òåëåôîíà"; 
 $MESS ['CALLBAKC_EMAIL'] = "Email"; 
-$MESS ['CALLBACK_TIME'] = "Ð’Ñ€ÐµÐ¼Ñ Ð´Ð»Ñ Ð·Ð²Ð¾Ð½ÐºÐ°"; 
-$MESS ['CALLBACK_THEME_NAME'] = "Ð¢ÐµÐ¼Ð° Ð·Ð²Ð¾Ð½ÐºÐ°"; 
-$MESS ['CALLBACK_DATE'] = "Ð”Ð°Ñ‚Ð°"; 
-$MESS ['CALLBACK_DELETE'] = "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ"; 
-$MESS ['CALLBACK_PAGE_TITLE'] = "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ð·Ð°ÑÐ²Ð¾Ðº Ð½Ð° Ð·Ð²Ð¾Ð½Ð¾Ðº";
-$MESS ['CALLBACK_ANSWER'] = "ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ñ‚ÑŒ";
-$MESS ['CALLBACK_STATUS'] = "Ð¡Ñ‚Ð°Ñ‚ÑƒÑ";
-$MESS ['CALLBACK_USER_ANSWER'] = "ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð»";
-$MESS ['CALLBACK_DATE_ANSWER'] = "Ð”Ð°Ñ‚Ð° Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸";
+$MESS ['CALLBACK_TIME'] = "Âðåìÿ äëÿ çâîíêà"; 
+$MESS ['CALLBACK_THEME_NAME'] = "Òåìà çâîíêà"; 
+$MESS ['CALLBACK_DATE'] = "Äàòà"; 
+$MESS ['CALLBACK_DELETE'] = "Óäàëèòü"; 
+$MESS ['CALLBACK_PAGE_TITLE'] = "Ñïèñîê çàÿâîê íà çâîíîê";
+$MESS ['CALLBACK_ANSWER'] = "Îáðàáîòàòü";
+$MESS ['CALLBACK_STATUS'] = "Ñòàòóñ";
+$MESS ['CALLBACK_USER_ANSWER'] = "Îáðàáîòàë";
+$MESS ['CALLBACK_DATE_ANSWER'] = "Äàòà îáðàáîòêè";
 
 
 

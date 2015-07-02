@@ -153,6 +153,7 @@ var alienspro_callback = function(lang){
 		    				$('#'+key).addClass('req');
 		    			}
 		    		});
+					captchaload();
 		    	}else{
 		    		var msgNodes='';   
 		    		msgNodes += '<div id="dialog-message">';
@@ -199,7 +200,11 @@ var alienspro_callback = function(lang){
 	});
 
 	$('#reload-captcha').click(function(){
-		$.ajax({
+		captchaload()
+	});
+	
+	function captchaload(){
+				$.ajax({
 			method:'POST',
 			data:{reload_captcha:'y'},
 			success:function(msg){
@@ -207,7 +212,7 @@ var alienspro_callback = function(lang){
 				$('#captcha_img').attr('src','/bitrix/tools/captcha.php?captcha_sid='+msg)
 			}
 		});
-	});
+	}
 };
 
 

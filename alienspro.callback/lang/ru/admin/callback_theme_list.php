@@ -1,8 +1,8 @@
 <?php
-$MESS ['CALLBACK_THEME_CREATE'] = "Ð¡Ð¾Ð·Ð´Ð°Ñ‚ÑŒ"; 
-$MESS ['CALLBACK_PAGES'] = "Ð¡Ñ‚Ñ€Ð°Ð½Ð¸Ñ†Ñ‹"; 
-$MESS ['CALLBACK_THEME_NAME'] = "ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ"; 
-$MESS ['CALLBACK_CONFIRM_DEL_CALLBACK'] = "Ð”ÐµÐ¹ÑÑ‚Ð²Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ"; 
-$MESS ['CALLBACK_DELETE'] = "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ"; 
-$MESS ['CALLBACK_PAGE_TITLE'] = "Ð¡Ð¿Ð¸ÑÐ¾Ðº Ñ‚ÐµÐ¼"; 
+$MESS ['CALLBACK_THEME_CREATE'] = "Ñîçäàòü"; 
+$MESS ['CALLBACK_PAGES'] = "Ñòðàíèöû"; 
+$MESS ['CALLBACK_THEME_NAME'] = "Íàçâàíèå"; 
+$MESS ['CALLBACK_CONFIRM_DEL_CALLBACK'] = "Äåéñòâèòåëüíî óäàëèòü"; 
+$MESS ['CALLBACK_DELETE'] = "Óäàëèòü"; 
+$MESS ['CALLBACK_PAGE_TITLE'] = "Ñïèñîê òåì"; 
 ?>
