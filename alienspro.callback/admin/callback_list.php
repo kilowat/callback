@@ -82,10 +82,10 @@ $rsData->NavStart();
 $lAdmin->NavText($rsData->GetNavPrint(GetMessage("CALLBACK_PAGES")));
 $lAdmin->AddHeaders(array(
 	array("id"=>"id", "content"=>"ID", "sort"=>"id", "default"=>true),
-	array("id"=>"name", "content"=>GetMessage("CALLBACK_NAME"), "sort"=>"name", "default"=>true),
+	array("id"=>"name", "content"=>GetMessage("CALLBACK_NAME_LIST"), "sort"=>"name", "default"=>true),
 	array("id"=>"phone", "content"=>GetMessage("CALLBACK_PHONE"), "sort"=>"phone", "default"=>true),
 	array("id"=>"email", "content"=>GetMessage("CALLBAKC_EMAIL"), "sort"=>"email", "default"=>true),
-	array("id"=>"time_t", "content"=>GetMessage("CALLBACK_TIME"), "sort"=>"time_t", "default"=>true),
+	array("id"=>"time", "content"=>GetMessage("CALLBACK_TIME"), "sort"=>"time", "default"=>true),
 	array("id"=>"theme", "content"=>GetMessage("CALLBACK_THEME_NAME"), "sort"=>"theme", "default"=>true),
 	array("id"=>"date_t", "content"=>GetMessage("CALLBACK_DATE"), "sort"=>"date_t", "default"=>true),
         array("id"=>"status", "content"=>GetMessage("CALLBACK_STATUS"), "sort"=>"status", "default"=>true),
@@ -95,7 +95,6 @@ $lAdmin->AddHeaders(array(
 
 while($arRes = $rsData->NavNext(true, "f_"))
 {       
-        
 	$row = &$lAdmin->AddRow($f_id, $arRes);
 
         if((int)$f_status==2){

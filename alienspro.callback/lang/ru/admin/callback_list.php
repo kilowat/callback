@@ -1,7 +1,7 @@
 <?
 $MESS ['CALLBACK_DELETE'] = "Удалить"; 
 $MESS ['CALLBACK_PAGES'] = "Страницы"; 
-$MESS ['CALLBACK_NAME'] = "Название"; 
+$MESS ['CALLBACK_NAME_LIST'] = "Название"; 
 $MESS ['CALLBACK_PHONE'] = "Номер телефона"; 
 $MESS ['CALLBAKC_EMAIL'] = "Email"; 
 $MESS ['CALLBACK_TIME'] = "Время для звонка"; 
