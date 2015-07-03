@@ -87,7 +87,7 @@ $lAdmin->AddHeaders(array(
 	array("id"=>"email", "content"=>GetMessage("CALLBAKC_EMAIL"), "sort"=>"email", "default"=>true),
 	array("id"=>"time", "content"=>GetMessage("CALLBACK_TIME"), "sort"=>"time", "default"=>true),
 	array("id"=>"theme", "content"=>GetMessage("CALLBACK_THEME_NAME"), "sort"=>"theme", "default"=>true),
-	array("id"=>"date_t", "content"=>GetMessage("CALLBACK_DATE"), "sort"=>"date_t", "default"=>true),
+	array("id"=>"date", "content"=>GetMessage("CALLBACK_DATE"), "sort"=>"date", "default"=>true),
         array("id"=>"status", "content"=>GetMessage("CALLBACK_STATUS"), "sort"=>"status", "default"=>true),
         array("id"=>"user_answer", "content"=>GetMessage("CALLBACK_USER_ANSWER"), "sort"=>"user_answer", "default"=>true),
         array("id"=>"date_answer", "content"=>GetMessage("CALLBACK_DATE_ANSWER"), "sort"=>"date_t", "default"=>true),
@@ -95,8 +95,9 @@ $lAdmin->AddHeaders(array(
 
 while($arRes = $rsData->NavNext(true, "f_"))
 {       
+	
 	$row = &$lAdmin->AddRow($f_id, $arRes);
-
+	
         if((int)$f_status==2){
             $f_status = "red";
         }else{
